@@ -1,12 +1,12 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: '/api',
+  baseURL: 'http://abtest.wyk.plus',
   timeout: 10000,
   withCredentials: true,
   headers: {
-    'Content-Type': 'application/json'
-  }
+    'Content-Type': 'application/json',
+  },
 })
 
 // 白名单接口（不需要验证）
@@ -16,7 +16,7 @@ request.interceptors.request.use(
   (config) => {
     console.log('请求地址:', config.url)
 
-    const isWhiteList = whiteList.some(url => config.url?.includes(url))
+    const isWhiteList = whiteList.some((url) => config.url?.includes(url))
 
     if (!isWhiteList) {
       // Session 方式，不需要手动添加 token
@@ -25,7 +25,7 @@ request.interceptors.request.use(
 
     return config
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 )
 
 request.interceptors.response.use(
@@ -44,7 +44,7 @@ request.interceptors.response.use(
       }
     }
     return Promise.reject(error)
-  }
+  },
 )
 
 export default request
