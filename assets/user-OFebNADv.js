@@ -1,0 +1,1 @@
+import{r}from"./request-MLNn2IBm.js";const o={login(e){return r.post("/user/login",e)},register(e){return r.post("/user/register",e)},getProfile(){return r.get("/user/profile")},logout(){return r.get("/user/logout")}};export{o as u};

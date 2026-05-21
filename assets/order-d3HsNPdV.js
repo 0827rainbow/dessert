@@ -1,0 +1,1 @@
+import{r as e}from"./request-MLNn2IBm.js";const o={getList(){return e.get("/order/list")},createFromCart(r){return e.post("/order/createFromCart",r)},createDirect(r){return e.post("/order/createDirect",r)},pay(r){return e.post(`/order/pay/${r}`)},cancel(r){return e.post(`/order/cancel/${r}`)}};export{o};

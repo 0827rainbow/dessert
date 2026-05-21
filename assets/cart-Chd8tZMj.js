@@ -1,0 +1,1 @@
+import{r as t}from"./request-MLNn2IBm.js";const u={get(){return t.get("/cart")},getCount(){return t.get("/cart/count")},add(r,e=1){return t.post("/cart/add",{dessertId:r,quantity:e})},updateQuantity(r,e){return t.put(`/cart/${r}?quantity=${e}`)},remove(r){return t.delete(`/cart/${r}`)},clear(){return t.delete("/cart/clear")}};export{u as c};
