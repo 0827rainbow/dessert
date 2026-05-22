@@ -1,1 +1,0 @@
-import{r}from"./request-MLNn2IBm.js";const o={list(e){return r.get("/category",{params:e})},add(e){return r.post("/category",e)},edit(e){return r.put("/category",e)},del(e){return r.delete(`/category/${e}`)}};export{o as C};
