@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: 'http://abtest.wyk.plus',
+  baseURL: '/api',
   timeout: 10000,
   withCredentials: true,
   headers: {
